@@ -24,6 +24,6 @@ function newSkill (req, res) {
 }
 
 function create(req, res) {
-    console.log(req.body);
+    skill.create(req.body);
     res.redirect('/skills');
   }
