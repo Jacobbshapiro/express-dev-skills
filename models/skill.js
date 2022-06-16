@@ -9,7 +9,8 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    update,
 
 }
 
@@ -32,4 +33,10 @@ function deleteOne(id) {
     id = ~~(id)
     const idx = skills.findIndex(skill => skill.id === id)
     skills.splice(idx, 1);
+}
+
+function update (editContent, id) {
+    id = ~~(id);
+    const skillUpdate = skills.find(skill => skill.id === id);
+    skillUpdate.skill = editContent.skill;
 }
